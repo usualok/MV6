@@ -1,0 +1,25 @@
+{
+  "name": "X Comment Liker (Human-like)",
+  "description": "Like les commentaires sur X de façon humaine (sessions, aléas, mémoire, logs).",
+  "version": "2.1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "X Comment Liker",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "scripting",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ]
+}

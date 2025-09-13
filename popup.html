@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>X Bot Manager</title>
+</head>
+<body>
+  <h3>Gestionnaire X Bots</h3>
+  <button id="startLiker">Démarrer Liker</button>
+  <button id="startReply">Démarrer Auto-Reply</button>
+  <script src="popup.js"></script>
+</body>
+</html>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>X Comment Liker</title>
+  <style>
+    body{font-family:system-ui,sans-serif;width:340px;padding:10px}
+    h1{font-size:16px;margin:0 0 8px}
+    .row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+    button{padding:4px 10px}
+    .pill{display:inline-block;padding:0 6px;border-radius:8px;font-size:12px;background:#eee}
+    .ok{color:#0a0}.warn{color:#c80}.err{color:#c00}.muted{color:#777}
+    ul{margin:6px 0 0 18px;padding:0;max-height:130px;overflow:auto}
+    .mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+  </style>
+</head>
+<body>
+  <h1>X Comment Liker</h1>
+  <div class="row">
+    <button id="btnStart">Start</button><button id="btnStop">Stop</button>
+    <a href="#" id="lnkOptions">Options</a>
+  </div>
+  <div class="row">
+    <div>Heure : <span id="now" class="mono">--:--:--</span></div>
+  </div>
+  <div>État : <span id="state">—</span></div>
+
+  <div style="margin-top:8px">
+    <strong>Fenêtre</strong> : <span id="win" class="mono"></span> — <strong>Auto</strong> : <span id="auto" class="pill">—</span>
+    <div class="muted mono" id="next">Prochaine session : —</div>
+  </div>
+
+  <div style="margin-top:8px"><strong>Sessions aujourd’hui</strong></div>
+  <ul id="runs"></ul>
+
+  <div style="margin-top:8px"><strong>Activité (aujourd’hui)</strong></div>
+  <ul id="log"></ul>
+
+  <script src="popup.js"></script>
+</body>
+</html>
